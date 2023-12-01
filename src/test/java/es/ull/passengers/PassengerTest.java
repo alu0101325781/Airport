@@ -12,12 +12,12 @@ public class PassengerTest {
 
     @BeforeEach
     void setUp() {
-        passenger = new Passenger("454152151554A", "Paco Rabanne", "SPAIN");
+        passenger = new Passenger("13322345S", "Paco Rabanne", "US");
     }
 
     @Test
     void testGetIdentifier() {
-        assertEquals("454152151554A", passenger.getIdentifier());
+        assertEquals("13322345S", passenger.getIdentifier());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class PassengerTest {
 
     @Test
     void testGetCountryCode() {
-        assertEquals("Spain", passenger.getCountryCode());
+        assertEquals("US", passenger.getCountryCode());
     }
 
     @Test
@@ -45,10 +45,10 @@ public class PassengerTest {
 
     @Test
     void testJoinFlightWithPreviousFlight() {
-        Flight previousFlight = new Flight("HV67363", 100);
+        Flight previousFlight = new Flight("HV7565", 100);
         passenger.joinFlight(previousFlight);
 
-        Flight newFlight = new Flight("SD373734", 100);
+        Flight newFlight = new Flight("HV7565", 100);
         passenger.joinFlight(newFlight);
 
         assertEquals(newFlight, passenger.getFlight());

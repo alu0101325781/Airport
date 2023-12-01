@@ -12,18 +12,18 @@ public class FlightTest {
     @BeforeEach
     void setUp() {
         // Configuración común antes de cada prueba
-        flight = new Flight("ZYT41", 60); // Número de vuelo válido y 50 asientos
+        flight = new Flight("ZY441", 60); // Número de vuelo válido y 50 asientos
     }
 
     @Test
     void testGetFlightNumber() {
-        assertEquals("ZYT41", flight.getFlightNumber());
+        assertEquals("ZY441", flight.getFlightNumber());
     }
 
 
     @Test
     void testRemovePassenger() {
-        Passenger passenger = new Passenger("4654523465F", "Fran Cuesta", "UK");
+        Passenger passenger = new Passenger("4654523465F", "Fran Cuesta", "ES");
         flight.addPassenger(passenger);
 
         assertTrue(flight.removePassenger(passenger));
@@ -32,7 +32,7 @@ public class FlightTest {
 
     @Test
     void testRemovePassengerNotInFlight() {
-        Passenger passenger = new Passenger("43554345E", "Carlos Mendoza", "UK");
+        Passenger passenger = new Passenger("43554345E", "Carlos Mendoza", "US");
 
         // Intentar eliminar un pasajero que no está en el vuelo no debería lanzar excepción
         assertFalse(flight.removePassenger(passenger));
