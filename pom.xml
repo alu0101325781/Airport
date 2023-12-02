@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.vogella.algorithms.sort.quicksort</groupId>
-  <artifactId>quicksort</artifactId>
+  <groupId>com.manning.junitbook</groupId>
+  <artifactId>Airport</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>quicksort</name>
+  <name>Airport</name>
   <url>http://maven.apache.org</url>
 
   <properties>
